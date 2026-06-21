@@ -34,6 +34,14 @@
         }
     }
     
+    // Приховує або показує вкладки перемикання між C++ та Windows Forms
+    function toggleTabsVisibility(show) {
+        const tabsSection = document.querySelector('.tabs-section');
+        if (tabsSection) {
+            tabsSection.style.display = show ? 'block' : 'none';
+        }
+    }
+    
     function renderTasksList() {
         const grid = document.getElementById('tasksGrid');
         if (!grid) return;
@@ -69,6 +77,9 @@
         
         if (listSection) listSection.style.display = 'none';
         if (taskDetail) taskDetail.style.display = 'block';
+        
+        // Приховуємо вкладки при відкритті завдання
+        toggleTabsVisibility(false);
         
         renderTaskDetail();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -150,6 +161,9 @@
         if (taskDetail) taskDetail.style.display = 'none';
         
         currentTask = null;
+        
+        // Показуємо вкладки знову при поверненні до списку завдань
+        toggleTabsVisibility(true);
     }
     
     function escapeHtml(text) {

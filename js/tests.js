@@ -37,6 +37,14 @@
         }
     }
     
+    // Приховує або показує вкладки перемикання між C++ та Windows Forms
+    function toggleTabsVisibility(show) {
+        const tabsSection = document.querySelector('.tabs-section');
+        if (tabsSection) {
+            tabsSection.style.display = show ? 'block' : 'none';
+        }
+    }
+    
     function renderTestsList() {
         const grid = document.getElementById('testsGrid');
         if (!grid) return;
@@ -77,6 +85,9 @@
         if (listSection) listSection.style.display = 'none';
         if (testInterface) testInterface.style.display = 'block';
         if (testResults) testResults.style.display = 'none';
+        
+        // Приховуємо вкладки при старті тесту
+        toggleTabsVisibility(false);
         
         renderQuestion();
         updateProgress();
@@ -177,6 +188,7 @@
         if (testInterface) testInterface.style.display = 'none';
         if (testResults) testResults.style.display = 'block';
         
+        // Вкладки залишаються прихованими на сторінці результатів
         renderResults();
     }
     
@@ -269,6 +281,9 @@
         currentQuestion = 0;
         answers = [];
         showingResults = false;
+        
+        // Показуємо вкладки знову при поверненні до списку тестів
+        toggleTabsVisibility(true);
     }
     
     function retryTest() {
