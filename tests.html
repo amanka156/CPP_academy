@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тести — C++ Academy</title>
+    <meta name="description" content="Інтерактивні тести з C++ та Windows Forms. 20 запитань до кожної теми.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">C++ Academy</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Головна</a>
+                <a href="lectures.html" class="nav-link">Лекції C++</a>
+                <a href="windows-forms.html" class="nav-link">Windows Forms</a>
+                <a href="tests.html" class="nav-link active">Тести</a>
+                <a href="tasks.html" class="nav-link">Завдання</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Змінити тему">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <h3>Навігація</h3>
+            <button class="side-menu-close" id="sideMenuClose" aria-label="Закрити меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="side-menu-search">
+            <input type="text" id="menuSearch" placeholder="Пошук тем..." aria-label="Пошук тем">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <nav class="side-menu-nav" id="sideMenuNav"></nav>
+    </aside>
+
+    <main class="main-content page-content">
+        <!-- Page Header -->
+        <section class="page-header tests-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <div class="page-breadcrumb">
+                        <a href="index.html">Головна</a>
+                        <span>/</span>
+                        <span>Тести</span>
+                    </div>
+                    <h1 class="page-title">Тестування знань</h1>
+                    <p class="page-subtitle">Перевірте свої знання з C++ та Windows Forms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Tabs -->
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs-bar" id="testsTabs">
+                    <button class="tab-btn active" data-tab="cpp">C++</button>
+                    <button class="tab-btn" data-tab="wf">Windows Forms</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tests List -->
+        <section class="tests-list-section" id="testsListSection">
+            <div class="container">
+                <div class="tests-grid" id="testsGrid">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Interface (hidden by default) -->
+        <section class="test-interface" id="testInterface" style="display:none;">
+            <div class="container">
+                <div class="test-header">
+                    <button class="btn btn-back" id="backToTests">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                        До списку тестів
+                    </button>
+                    <div class="test-progress">
+                        <div class="test-progress-bar">
+                            <div class="test-progress-fill" id="testProgressFill"></div>
+                        </div>
+                        <span class="test-progress-text" id="testProgressText">1 / 20</span>
+                    </div>
+                </div>
+
+                <div class="test-question-card" id="testQuestionCard">
+                    <!-- Generated by JS -->
+                </div>
+
+                <div class="test-actions">
+                    <button class="btn btn-secondary" id="prevQuestion" disabled>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                        Попереднє
+                    </button>
+                    <button class="btn btn-primary" id="nextQuestion">
+                        Наступне
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                    <button class="btn btn-success" id="finishTest" style="display:none;">
+                        Завершити тест
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Results (hidden by default) -->
+        <section class="test-results" id="testResults" style="display:none;">
+            <div class="container">
+                <div class="results-card">
+                    <div class="results-header">
+                        <h2>Результати тесту</h2>
+                        <p class="results-test-name" id="resultsTestName"></p>
+                    </div>
+                    <div class="results-score" id="resultsScore"></div>
+                    <div class="results-circle">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="results-circle-bg" cx="60" cy="60" r="50"/>
+                            <circle class="results-circle-fill" id="resultsCircleFill" cx="60" cy="60" r="50"/>
+                        </svg>
+                        <div class="results-percent" id="resultsPercent">0%</div>
+                    </div>
+                    <div class="results-breakdown" id="resultsBreakdown">
+                        <!-- Generated by JS -->
+                    </div>
+                    <div class="results-actions">
+                        <button class="btn btn-primary" id="retryTest">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                            Спробувати знову
+                        </button>
+                        <button class="btn btn-secondary" id="backToTests2">
+                            До списку тестів
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-text">C++ Academy</span>
+                        <span class="logo-bracket">}</span>
+                    </div>
+                    <p class="footer-desc">Всебічний освітній ресурс для вивчення C++ та Windows Forms.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навігація</h4>
+                    <ul class="footer-links">
+                        <li><a href="lectures.html">Лекції C++</a></li>
+                        <li><a href="windows-forms.html">Windows Forms</a></li>
+                        <li><a href="tests.html">Тести</a></li>
+                        <li><a href="tasks.html">Завдання</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ресурси</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://en.cppreference.com/" target="_blank">cppreference.com</a></li>
+                        <li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
+                        <li><a href="https://isocpp.org/" target="_blank">isocpp.org</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Інформація</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Про сайт</a></li>
+                        <li><a href="#">Ліцензія</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> C++ Academy. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tests.js"></script>
+</body>
+</html>
