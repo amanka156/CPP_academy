@@ -903,6 +903,10 @@ button {
     background: linear-gradient(135deg, var(--warning-bg) 0%, var(--bg) 100%);
 }
 
+.documents-header {
+    background: linear-gradient(135deg, var(--danger-bg) 0%, var(--bg) 100%);
+}
+
 .page-breadcrumb {
     display: flex;
     align-items: center;
@@ -1825,6 +1829,289 @@ code {
 }
 
 /* ============================================
+   DOCUMENTS PAGE
+   ============================================ */
+
+.documents-section {
+    padding: 32px 0;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.document-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-slow);
+    position: relative;
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.document-card-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+}
+
+.doc-icon-pdf {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.doc-icon-word {
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.doc-icon-docx {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+[data-theme="dark"] .doc-icon-pdf {
+    background: rgba(220, 38, 38, 0.2);
+    color: #F87171;
+}
+
+[data-theme="dark"] .doc-icon-word {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60A5FA;
+}
+
+[data-theme="dark"] .doc-icon-docx {
+    background: rgba(5, 150, 105, 0.2);
+    color: #34D399;
+}
+
+.doc-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.doc-badge-pdf {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.doc-badge-word {
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.doc-badge-docx {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+[data-theme="dark"] .doc-badge-pdf {
+    background: rgba(220, 38, 38, 0.2);
+    color: #F87171;
+}
+
+[data-theme="dark"] .doc-badge-word {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60A5FA;
+}
+
+[data-theme="dark"] .doc-badge-docx {
+    background: rgba(5, 150, 105, 0.2);
+    color: #34D399;
+}
+
+.document-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.document-card-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.document-card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.document-card-actions .btn {
+    font-size: 13px;
+    padding: 8px 14px;
+}
+
+/* PDF Viewer Section */
+.pdf-viewer-section {
+    padding: 32px 0;
+}
+
+.pdf-viewer-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.pdf-viewer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.pdf-viewer-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.pdf-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.pdf-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition);
+    white-space: nowrap;
+}
+
+.pdf-tab:hover {
+    color: var(--text-primary);
+    background: var(--bg);
+    border-color: var(--border);
+}
+
+.pdf-tab.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.pdf-frame-container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: var(--bg);
+}
+
+.pdf-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px;
+}
+
+.pdf-placeholder svg {
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.pdf-placeholder h3 {
+    font-size: 18px;
+    font-weight: 00;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.pdf-placeholder p {
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.pdf-frame-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Download All Section */
+.download-all-section {
+    padding: 32px 0 60px;
+}
+
+.download-all-card {
+    text-align: center;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.download-all-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.download-all-card p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.download-all-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
@@ -2018,6 +2305,37 @@ code {
     .tab-btn {
         flex: 1;
         text-align: center;
+    }
+    
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pdf-frame-container {
+        height: 400px;
+    }
+    
+    .pdf-tabs {
+        padding: 8px 16px;
+    }
+    
+    .pdf-tab {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .download-all-card {
+        padding: 24px;
+    }
+    
+    .download-all-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-all-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 

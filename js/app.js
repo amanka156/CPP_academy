@@ -12,6 +12,7 @@
         if (path.includes('windows-forms.html')) return 'wf';
         if (path.includes('tests.html')) return 'tests';
         if (path.includes('tasks.html')) return 'tasks';
+        if (path.includes('documents.html')) return 'documents';
         return 'home';
     }
     
@@ -373,6 +374,8 @@
             initFilters();
             initLectureNav();
             checkUrlParams();
+        } else if (pageType === 'documents') {
+            // Documents page init is handled by inline script in documents.html
         }
         
         // Global code copy init

@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методичні документи — C++ Academy</title>
+    <meta name="description" content="Офіційні методичні матеріали, екзаменаційні білети та навчально-методичні комплекси з програмування.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">C++ Academy</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Головна</a>
+                <a href="lectures.html" class="nav-link">Лекції C++</a>
+                <a href="windows-forms.html" class="nav-link">Windows Forms</a>
+                <a href="tests.html" class="nav-link">Тести</a>
+                <a href="tasks.html" class="nav-link">Завдання</a>
+                <a href="documents.html" class="nav-link active">Документи</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Змінити тему">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <h3>Навігація</h3>
+            <button class="side-menu-close" id="sideMenuClose" aria-label="Закрити меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="side-menu-search">
+            <input type="text" id="menuSearch" placeholder="Пошук тем..." aria-label="Пошук тем">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <nav class="side-menu-nav" id="sideMenuNav"></nav>
+    </aside>
+
+    <main class="main-content page-content">
+        <section class="page-header documents-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <div class="page-breadcrumb">
+                        <a href="index.html">Головна</a>
+                        <span>/</span>
+                        <span>Методичні документи</span>
+                    </div>
+                    <h1 class="page-title">Методичні документи</h1>
+                    <p class="page-subtitle">Офіційні методичні матеріали, екзаменаційні білети та навчально-методичні комплекси</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="documents-section">
+            <div class="container">
+                <div class="documents-grid" id="documentsGrid">
+                    <!-- Document 1: Exam Tickets -->
+                    <div class="document-card" data-doc="bilety">
+                        <div class="document-card-icon doc-icon-pdf">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-pdf">PDF</span>
+                        <h3 class="document-card-title">Екзаменаційні білети</h3>
+                        <p class="document-card-desc">Офіційні екзаменаційні білети з програмування для підготовки до іспитів. Містить повний набір питань та завдань.</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="bilety">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/%D0%95%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D1%96%20%D0%B1%D1%96%D0%BB%D0%B5%D1%82%D0%B8.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/%D0%95%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D1%96%20%D0%B1%D1%96%D0%BB%D0%B5%D1%82%D0%B8.docx" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOCX
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 2: Methodical Guidelines -->
+                    <div class="document-card" data-doc="metodichni">
+                        <div class="document-card-icon doc-icon-word">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-word">DOC</span>
+                        <h3 class="document-card-title">Методичні вказівки</h3>
+                        <p class="document-card-desc">Методичні вказівки до виконання курсових робіт з програмування. Детальні інструкції та вимоги до оформлення.</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="metodichni">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%96%20%D0%B2%D0%BA%D0%B0%D0%B7%D1%96%D0%B2%D0%BA%D0%B8%20%D0%B4%D0%BE%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85%20%D1%80%D0%BE%D0%B1%D1%96%D1%82.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%96%20%D0%B2%D0%BA%D0%B0%D0%B7%D1%96%D0%B2%D0%BA%D0%B8%20%D0%B4%D0%BE%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85%20%D1%80%D0%BE%D0%B1%D1%96%D1%82.doc" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOC
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 3: NMK -->
+                    <div class="document-card" data-doc="nmk">
+                        <div class="document-card-icon doc-icon-docx">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-docx">DOCX</span>
+                        <h3 class="document-card-title">НМК Програмування</h3>
+                        <p class="document-card-desc">Навчально-методичний комплекс з дисципліни Програмування. Повний набір навчальних матеріалів та ресурсів.</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="nmk">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/%D0%9D%D0%9C%D0%9A%20%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/%D0%9D%D0%9C%D0%9A%20%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F.docx" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOCX
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Робоча програма -->
+                    <div class="document-card" data-doc="rob">
+                        <div class="document-card-icon doc-icon-docx">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-docx">DOCX</span>
+                        <h3 class="document-card-title">Робоча програма Програмування</h3>
+                        <p class="document-card-desc">Робоча програма дисципліни "Програмування".</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="rob">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/програмування.docx.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/програмування (3).docx" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOCX
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Навчальна програма -->
+                    <div class="document-card" data-doc="navch">
+                        <div class="document-card-icon doc-icon-docx">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-docx">DOCX</span>
+                        <h3 class="document-card-title">Навчальна програма</h3>
+                        <p class="document-card-desc">Навчальна програма дисципліни "Програмування".</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="navch">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/ОК14 - Програмування. Навчальна програма.docx.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/ОК14 - Програмування. Навчальна програма (1).docx" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOCX
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Document 3: NMK -->
+                    <div class="document-card" data-doc="recenz">
+                        <div class="document-card-icon doc-icon-docx">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                        </div>
+                        <span class="doc-badge doc-badge-docx">DOCX</span>
+                        <h3 class="document-card-title">Рецензія</h3>
+                        <p class="document-card-desc">Рецензія на навчальну дисципліну "Програмування".</p>
+                        <div class="document-card-actions">
+                            <button class="btn btn-primary doc-view-btn" data-doc="recenz">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                Переглянути
+                            </button>
+                            <a href="documents/Програмування рецензія.docx.pdf" class="btn btn-success" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                PDF
+                            </a>
+                            <a href="documents/Програмування рецензія.docx" class="btn btn-secondary" download>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                DOCX
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF Viewer Section -->
+        <section class="pdf-viewer-section" id="pdfViewerSection" style="display: none;">
+            <div class="container">
+                <div class="pdf-viewer-card">
+                    <div class="pdf-viewer-header">
+                        <h2 class="pdf-viewer-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            Перегляд документів
+                        </h2>
+                        <button class="btn btn-back" id="closePdfViewer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                            Закрити перегляд
+                        </button>
+                    </div>
+                    <div class="pdf-tabs" id="pdfTabs">
+                        <button class="pdf-tab active" data-doc="bilety">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            Екзаменаційні білети
+                        </button>
+                        <button class="pdf-tab" data-doc="metodichni">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            Методичні вказівки
+                        </button>
+                        <button class="pdf-tab" data-doc="nmk">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            НМК Програмування
+                        </button>
+                        <button class="pdf-tab" data-doc="rob">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            Навчальна програма
+                        </button>
+                        <button class="pdf-tab" data-doc="navch">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            Робоча програма
+                        </button>
+                        <button class="pdf-tab" data-doc="recenz">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
+                            Рецензія
+                        </button>
+                    </div>
+                    <div class="pdf-frame-container" id="pdfFrameContainer">
+                        <div class="pdf-placeholder" id="pdfPlaceholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            <h3>Перегляд PDF документів</h3>
+                            <p>Натисніть "Переглянути" на картці документа або виберіть вкладку вище, щоб відкрити документ для перегляду прямо на сайті.</p>
+                        </div>
+                        <iframe id="pdfViewer" src="" frameborder="0" style="display: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-text">C++ Academy</span>
+                        <span class="logo-bracket">}</span>
+                    </div>
+                    <p class="footer-desc">Всебічний освітній ресурс для вивчення C++ та Windows Forms.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навігація</h4>
+                    <ul class="footer-links">
+                        <li><a href="lectures.html">Лекції C++</a></li>
+                        <li><a href="windows-forms.html">Windows Forms</a></li>
+                        <li><a href="tests.html">Тести</a></li>
+                        <li><a href="tasks.html">Завдання</a></li>
+                        <li><a href="documents.html">Методичні документи</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ресурси</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://en.cppreference.com/" target="_blank">cppreference.com</a></li>
+                        <li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
+                        <li><a href="https://isocpp.org/" target="_blank">isocpp.org</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Інформація</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Про сайт</a></li>
+                        <li><a href="#">Ліцензія</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>C++ Academy. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+    (function() {
+        // Document file paths — using direct file names with URL encoding for Ukrainian characters
+        var docFiles = {
+            bilety: {
+                pdf: 'documents/%D0%95%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D1%96%20%D0%B1%D1%96%D0%BB%D0%B5%D1%82%D0%B8.pdf',
+                docx: 'documents/%D0%95%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D1%96%20%D0%B1%D1%96%D0%BB%D0%B5%D1%82%D0%B8.docx',
+                title: 'Екзаменаційні білети'
+            },
+            metodichni: {
+                pdf: 'documents/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%96%20%D0%B2%D0%BA%D0%B0%D0%B7%D1%96%D0%B2%D0%BA%D0%B8%20%D0%B4%D0%BE%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85%20%D1%80%D0%BE%D0%B1%D1%96%D1%82.pdf',
+                doc: 'documents/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%96%20%D0%B2%D0%BA%D0%B0%D0%B7%D1%96%D0%B2%D0%BA%D0%B8%20%D0%B4%D0%BE%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85%20%D1%80%D0%BE%D0%B1%D1%96%D1%82.doc',
+                title: 'Методичні вказівки'
+            },
+            nmk: {
+                pdf: 'documents/%D0%9D%D0%9C%D0%9A%20%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F.pdf',
+                docx: 'documents/%D0%9D%D0%9C%D0%9A%20%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F.docx',
+                title: 'НМК Програмування'
+            },
+            metodrozrobka: {
+                pdf: 'documents/%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F%20%D0%A0%D0%BE%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B7%20%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%87%D0%BD%D0%B8%D0%BC%D0%B8%20%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%D0%BC%D0%B8.pdf',
+                title: 'Методична розробка заняття'
+            },
+         rob: {
+                pdf: 'documents/програмування.docx.pdf',
+                docx: 'documents/програмування (3).docx',
+                title: 'НМК Програмування'
+            },
+         navch: {
+                pdf: 'documents/ОК14 - Програмування. Навчальна програма.docx.pdf',
+                docx: 'documents/ОК14 - Програмування. Навчальна програма (1).docx',
+                title: 'НМК Програмування'
+            },
+         recenz: {
+                pdf: 'documents/Програмування рецензія.docx.pdf',
+                docx: 'documents/Програмування рецензія.docx',
+                title: 'НМК Програмування'
+          }
+        };
+
+        function initDocumentsPage() {
+            // "View" buttons on document cards
+            document.querySelectorAll('.doc-view-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var docId = this.dataset.doc;
+                    var viewer = document.getElementById('pdfViewerSection');
+                    viewer.style.display = '';
+                    viewer.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    document.querySelectorAll('.pdf-tab').forEach(function(t) {
+                        t.classList.toggle('active', t.dataset.doc === docId);
+                    });
+                    loadPdf(docId);
+                });
+            });
+
+            // Tab switching in viewer
+            document.querySelectorAll('.pdf-tab').forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    var docId = this.dataset.doc;
+                    document.querySelectorAll('.pdf-tab').forEach(function(t) { t.classList.remove('active'); });
+                    this.classList.add('active');
+                    loadPdf(docId);
+                });
+            });
+
+            // Close viewer button
+            var closeBtn = document.getElementById('closePdfViewer');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    document.getElementById('pdfViewerSection').style.display = 'none';
+                    document.getElementById('pdfViewer').src = '';
+                    document.getElementById('pdfViewer').style.display = 'none';
+                    document.getElementById('pdfPlaceholder').style.display = '';
+                    document.querySelectorAll('.pdf-tab').forEach(function(t) { t.classList.remove('active'); });
+                });
+            }
+        }
+
+        function loadPdf(docId) {
+            var iframe = document.getElementById('pdfViewer');
+            var placeholder = document.getElementById('pdfPlaceholder');
+            var doc = docFiles[docId];
+            if (iframe && doc && doc.pdf) {
+                placeholder.style.display = 'none';
+                iframe.style.display = '';
+                // Direct PDF display — browser handles PDF rendering natively
+                iframe.src = doc.pdf;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initDocumentsPage);
+    })();
+    </script>
+</body>
+</html>
